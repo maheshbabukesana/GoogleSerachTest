@@ -6,5 +6,6 @@ public interface GoogleSearchLocators {
     String predictionItemsClassId = "aajZCb";
     String SearchKeywordLinkTagName ="cite";
     String Url = "https://www.google.com/";
+    String InvalidClassName ="GyAeWb";
 
 }

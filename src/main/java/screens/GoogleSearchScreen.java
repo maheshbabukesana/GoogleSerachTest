@@ -15,14 +15,9 @@ import static Locators.GoogleSearchLocators.*;
 public class GoogleSearchScreen implements Search {
 
      private WebDriver driver = new ChromeDriver();
-     private  static WebElement AcceptCookies, DisplaySearch, SearchKeyword,PredictiveItems;
+     private  static WebElement AcceptCookies, DisplaySearch, SearchKeyword,PredictiveItems,InvalidClass;
 
      public GoogleSearchScreen(){}
-
-     @Inject
-     public GoogleSearchScreen(WebDriver driver) {
-        this.driver = driver;
-    }
 
 
     public boolean isPredictiveItemViewDisplayed() {
@@ -52,8 +47,8 @@ public class GoogleSearchScreen implements Search {
     }
 
     public boolean isSearchValid() {
-
-        return false;
+         InvalidClass = driver.findElement(By.className(InvalidClassName));
+        return InvalidClass.isDisplayed();
     }
 
     public boolean isSearchDisplayed() {
