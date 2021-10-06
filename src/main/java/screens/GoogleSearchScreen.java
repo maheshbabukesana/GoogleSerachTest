@@ -42,8 +42,7 @@ public class GoogleSearchScreen implements Search {
 
     public void enterInvalidSearch() {
         SearchKeyword = driver.findElement(By.name(SearchBarByName));
-        SearchKeyword.sendKeys("dfrydbvrjkvjkjvnv");
-        SearchKeyword.sendKeys(Keys.ENTER);
+        SearchKeyword.sendKeys("dfrydbvrjkvjkjvnv",Keys.ENTER);
     }
 
     public boolean isSearchValid() {

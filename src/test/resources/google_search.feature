@@ -16,7 +16,7 @@ Feature: Google Search
   Scenario: Verify Google invalid search parameter
     Given The search field should be displayed
     When  I type {invalid search} on search
-    Then I see  page not found message
+    Then I see  invalid message
 
 
 
